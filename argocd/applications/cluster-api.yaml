@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-api
+  namespace: akuity
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/your-org/your-repo'
+    path: apps/cluster-api/overlays/prod
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cluster-api
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

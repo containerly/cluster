@@ -1,0 +1,3 @@
+resources:
+  - cluster.yaml
+  - machine-deployment.yaml
