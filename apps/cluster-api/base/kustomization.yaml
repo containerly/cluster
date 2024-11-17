@@ -1,3 +1,6 @@
 resources:
   - cluster.yaml
   - machine-deployment.yaml
+  - provider-components.yaml
+
+namespace: cluster-api
