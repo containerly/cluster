@@ -8,5 +8,3 @@ resources:
   - base/machine-deployment.yaml
   - base/provider-components.yaml
 
-patches:
-- path: overlays/prd/patches.yaml
