@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: akuity
 
 resources:
-  - base/clusteryaml
+  - base/cluster.yaml
   - base/machine-deployment.yaml
   - base/provider-components.yaml
 
