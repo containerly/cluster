@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-api
-  namespace: akuity
+  name: gcp-cluster-dev
+  namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/containerly/cluster
-    path: apps/cluster-api/overlays/prod
-    targetRevision: HEAD
+    repoURL: https://github.com/your-org/your-repo.git
+    targetRevision: main
+    path: kustomize/overlays/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: cluster-api
+    namespace: default
   syncPolicy:
     automated:
       prune: true

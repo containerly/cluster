@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export CLUSTER_TOPOLOGY=true
+export GOOGLE_APPLICATION_CREDENTIALS=~/google-application-credentials.json
+export GCP_B64ENCODED_CREDENTIALS=$( cat $GOOGLE_APPLICATION_CREDENTIALS | base64 | tr -d '\n' )
+clusterctl init --infrastructure gcp
+export GCP_NETWORK_NAME=default
+export GCP_PROJECT=containerly-377101
+export GCP_REGION=us-east1
+clusterctl generate cluster example-gcp --kubernetes-version 1.30.6 --from cluster-template-gcp.yaml | kubectl apply -f -
