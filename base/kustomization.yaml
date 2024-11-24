@@ -4,5 +4,4 @@ metadata:
   name: capi-manager-prod-workloads
 
 resources:
-- namespace.yaml
 - capi-manager-prod.yaml
