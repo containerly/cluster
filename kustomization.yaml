@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: default
 
 resources:
-  - overlays/prod/cluster.yaml
+  - overlays/prod/
